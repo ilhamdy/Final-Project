@@ -85,7 +85,7 @@ func (p *CommentRepo) GetCommentById(c *gin.Context) {
 // @Failure     400		{object}	utils.ResponseMessageComment
 // @Failure     401		{object}	utils.ResponseMessageComment
 // @Security    Bearer
-// @Router      /comments/{id}	[post]
+// @Router      /comments/	[post]
 func (o *CommentRepo) CreateComment(c *gin.Context) {
 	contentType := helpers.GetContentType(c)
 

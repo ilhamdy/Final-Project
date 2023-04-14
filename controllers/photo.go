@@ -112,7 +112,7 @@ func (p *PhotoRepo) GetPhotoById(c *gin.Context) {
 // @Failure     400			{object}	utils.ResponseMessagePhoto
 // @Failure     401			{object}	utils.ResponseMessagePhoto
 // @Security    Bearer
-// @Router      /photos/{id}	[post]
+// @Router      /photos/	[post]
 func (p *PhotoRepo) CreatePhoto(c *gin.Context) {
 	Photo := models.Photo{}
 	contextType := helpers.GetContentType(c)
