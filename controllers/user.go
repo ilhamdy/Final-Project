@@ -8,8 +8,6 @@ import (
 	"mygram/helpers"
 	"mygram/models"
 
-	// "mygram/utils"
-
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -57,17 +55,6 @@ func (u *UserRepo) UserRegister(c *gin.Context) {
 		"username": User.Username,
 		"age":      User.Age,
 	})
-	/*
-		c.JSON(http.StatusCreated, helpers.ResponseData{
-			Status: "success",
-			Data: utils.RegisteredUser{
-				Age:      user.Age,
-				Email:    user.Email,
-				ID:       user.ID,
-				Username: user.Username,
-			},
-		})
-	*/
 }
 
 // UserLogin godoc

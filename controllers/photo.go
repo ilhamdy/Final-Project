@@ -8,8 +8,6 @@ import (
 	"mygram/helpers"
 	"mygram/models"
 
-	// "mygram/utils"
-
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -40,31 +38,6 @@ func (p *PhotoRepo) GetPhoto(c *gin.Context) {
 		})
 		return
 	}
-
-	/*
-		getPhotos := []*utils.GetPhoto{}
-
-		for _, photo := range Photos {
-			getPhotos = append(getPhotos, &utils.GetPhoto{
-				ID:        photo.ID,
-				Title:     photo.Title,
-				Caption:   photo.Caption,
-				PhotoUrl:  photo.PhotoUrl,
-				UserID:    photo.UserID,
-				CreatedAt: photo.CreatedAt,
-				UpdatedAt: photo.UpdatedAt,
-				User: &utils.User{
-					Email:    photo.User.Email,
-					Username: photo.User.Username,
-				},
-			})
-		}
-
-		c.JSON(http.StatusOK, helpers.ResponseData{
-			Status: "success",
-			Data:   getPhotos,
-		})
-	*/
 
 	c.JSON(http.StatusOK, gin.H{
 		"photos": Photos,
